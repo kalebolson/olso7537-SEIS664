@@ -2,7 +2,7 @@
 set -e  # exit immediately if anything returns non-zero. See https://www.javatpoint.com/linux-set-command
 
 echo "  ----- download and initialize app -----  "
-git clone https://github.com/dm-academy/dp-course.git
+git clone https://github.com/dm-academy/node-svc.git
 cd node-svc
 git checkout 02
 
