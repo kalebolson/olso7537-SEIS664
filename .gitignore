@@ -7,6 +7,9 @@ node_modules
 .terraform/
 *.tfstate*
 
+# TF Providers
+providers.tf
+
 # Ansible
 *.retry
 

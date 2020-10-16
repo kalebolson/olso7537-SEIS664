@@ -2,7 +2,7 @@
 // or can be replicated and will round-robin requests among peers.  
 
 'use strict';
-const arrNodes = [ "34.70.205.65" ] // you might need this for K8S
+const arrNodes = [ "35.194.5.71" ] // you might need this for K8S
 
 // vary these constants according to how many VMs you have deployed
 //const arrNodes = [ "localhost" ] // for testing on GCS
@@ -22,14 +22,18 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// shuts down application
 app.get('/999', (req, res) => {
  (async () => {
+   console.warn("***SHUTDOWN SIGNAL***");
    res.write("Shutting down.");
+
    res.status(200).end();
    return process.exit(999);
   })();
 })
 
+// simplest get; recursion end point
 app.get('/0?', (req, res) => {     // matches either / or /0
   (async () => {
     // A simple change is to alter the returned data, 
