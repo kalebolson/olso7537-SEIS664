@@ -38,7 +38,7 @@ app.get('/0?', (req, res) => {     // matches either / or /0
   (async () => {
     // A simple change is to alter the returned data, 
     // e.g. change "ThisAction" to "Action"
-    res.write(dateIPStamp({ "ThisAction":"GET" }, req.ip));
+    res.write(dateIPStamp({ "AlteredAction":"GET" }, req.ip));
     res.status(200).end();
     console.log('Console: / Server returned success on get.');
   })();
