@@ -2,10 +2,10 @@
 // or can be replicated and will round-robin requests among peers.  
 
 'use strict';
-const arrNodes = [ "35.194.5.71" ] // you might need this for K8S
+// const arrNodes = [ "35.194.5.71" ] // you might need this for K8S
 
 // vary these constants according to how many VMs you have deployed
-//const arrNodes = [ "localhost" ] // for testing on GCS
+const arrNodes = [ "localhost" ] // for testing on GCS
 //const arrNodes = [ "node-svc-01" ]
 //const arrNodes = [ "node-svc-01", "node-svc-02" ]
 //const arrNodes = [ "node-svc-01", "node-svc-02" , "node-svc-03" ]
